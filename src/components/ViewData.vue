@@ -23,12 +23,6 @@
   import { useDataStore } from '../stores/dataStore';
   
   export default {
-    // computed: {
-    //   data() {
-    //     const store = useDataStore();
-    //     return store.data;
-    //   }
-    // },
     data() {
       return {
         list : []
@@ -41,12 +35,11 @@
       deleteItem(index) {
         const store = useDataStore();
         store.deleteData(index);
+        this.getData()
       },
       getData() {
-        const data = localStorage.getItem("data")
+        const data = JSON.parse(localStorage.getItem('data'));
         this.list = data
-        console.log(this.list)
-        console.log(data)
       }
     }
   }

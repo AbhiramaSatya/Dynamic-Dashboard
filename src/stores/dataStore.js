@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 
 export const useDataStore = defineStore('dataStore', {
   state: () => ({
-    data: JSON.parse(localStorage.getItem('data')) || []
+    data: JSON.parse(localStorage.getItem('data'))
   }),
   actions: {
     addData(newItem) {
