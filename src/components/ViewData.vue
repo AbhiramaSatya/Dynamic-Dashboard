@@ -29,7 +29,7 @@
     //     return store.data;
     //   }
     // },
-    data() {
+      data() {
       return {
         list : []
       }
